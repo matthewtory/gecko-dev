@@ -149,6 +149,7 @@ static bool IsArg(const char* arg, const char* s) {
 Bootstrap::UniquePtr gBootstrap;
 
 static int do_main(int argc, char* argv[], char* envp[]) {
+  printf("hello matthew-tory\n");
   // Allow firefox.exe to launch XULRunner apps via -app <application.ini>
   // Note that -app must be the *first* argument.
   const char* appDataFile = getenv("XUL_APP_FILE");
@@ -247,7 +248,6 @@ uint32_t gBlocklistInitFlags = eDllBlocklistInitFlagDefault;
 #endif
 
 int main(int argc, char* argv[], char* envp[]) {
-    printf("hello matthew-tory\n");
 
 #if defined(MOZ_ENABLE_FORKSERVER)
   if (strcmp(argv[argc - 1], "forkserver") == 0) {
