@@ -248,7 +248,6 @@ uint32_t gBlocklistInitFlags = eDllBlocklistInitFlagDefault;
 #endif
 
 int main(int argc, char* argv[], char* envp[]) {
-
 #if defined(MOZ_ENABLE_FORKSERVER)
   if (strcmp(argv[argc - 1], "forkserver") == 0) {
     nsresult rv = InitXPCOMGlue(LibLoadingStrategy::NoReadAhead);
